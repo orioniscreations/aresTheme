@@ -21,7 +21,7 @@ body {
     margin-bottom: 10%;
 
     position: relative;
-
+    z-index: 8;
 
     background-image: url(/img/circle1.png);
     /* background-color:rgb(000, 000, 000, 0.8); */
@@ -40,7 +40,7 @@ body {
     left:50%;
     margin-top: -200px;
     margin-left: -180px;
-
+z-index: 9;
     overflow-y: scroll;
 
     
@@ -68,8 +68,158 @@ body {
 
 #render {
     position: absolute;
-    z-index: 1;
+    z-index: 5;
     position: fixed;
    
     
 }
+
+#about {
+    width: 300px;
+    height: 300px;            
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    
+    /* background-color: rgb(000, 000, 000, 0.8); */
+
+    background-image: url(/img/about5.png);
+    background-size: contain;
+    background-position: center;
+    border-radius: 40%;
+
+   
+}
+
+#aboutInner{
+    margin: auto;
+    margin-top: 45px;
+    background-color: rgb(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+#aboutInnerText{
+    
+    margin-top: 30px;
+    margin-right: 50px;
+    position: absolute;
+    text-align: center;
+}
+
+/* Hover idea */
+
+.aboutCont{
+    position: absolute;
+  
+
+    width: 300px;
+    height: 300px;            
+   
+    top: 200px;
+    right: 200px;
+    
+    /* background-color: rgb(000, 000, 000, 0.8); */
+
+    background-image: url(/img/about6.png);
+    background-size: contain;
+    background-position: center;
+    border-radius: 40%;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+
+
+  
+  .aboutCont:hover .image {
+    opacity: 0.3;
+  }
+  
+  .aboutCont:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 50%;
+    font-size: 16px;
+    padding: 50%;
+
+    width: 200px;
+    height: 200px;
+  }
+
+  .navi{
+      position: absolute;
+     margin-top: 50px;
+     color: turquoise;
+  }
+
+  /* testing */
+
+  /* Parent Container */
+.content_img{
+    position: relative;
+   
+    float: left;
+    margin-right: 10px;
+   }
+   
+   /* Child Text Container */
+   .content_img div{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: black;
+    color: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+    border-radius: 25px;
+   }
+   
+   /* Hover on Parent Container */
+   .content_img:hover{
+    cursor: pointer;
+   }
+   
+   .content_img:hover div{
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7; 
+   }
+
+   .modal-body {
+       background-image: url(/img/modalBackground.png);
+       width: 888px;
+       height: 500px;
+   }
+
+   .navDex{
+       margin-top: 100px;
+   }

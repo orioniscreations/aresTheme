@@ -9,10 +9,234 @@
     <link href="https://static.tumblr.com/p0knose/yKlp5mq5l/normalize.css" rel="stylesheet" />
     <link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" />
     <link href="https://static.tumblr.com/wupwnyt/qWVoc4phj/resizing.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
-    <!-- CSS Will have to be added here afterwards and not on a seperate page to work -->
-    <link rel="stylesheet" href="main.css">
+    <style>
+        html {
+            margin: 0px;
+        }
+
+        body {
+            background-image: url(/img/-ggg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        #bodyCont {
+            margin: auto;
+            text-align: center;
+
+            height: 700px;
+            width: 700px;
+
+            margin-top: 7%;
+            margin-bottom: 10%;
+
+            position: relative;
+            z-index: 8;
+
+            background-image: url(/img/circle1.png);
+            /* background-color:rgb(000, 000, 000, 0.8); */
+            background-size: cover;
+            /* border-radius: 50%; */
+        }
+
+        #textCont {
+
+
+
+            width: 365px;
+            height: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -200px;
+            margin-left: -180px;
+            z-index: 9;
+            overflow-y: scroll;
+
+
+        }
+
+        ::-webkit-scrollbar-track {
+
+            background-color: transparent;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #CFB53B;
+            border: 2px solid #C6930A;
+            border-radius: 6px;
+        }
+
+
+        #render {
+            position: absolute;
+            z-index: 5;
+            position: fixed;
+
+
+        }
+
+        #about {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 200px;
+            right: 200px;
+
+            /* background-color: rgb(000, 000, 000, 0.8); */
+
+            background-image: url(/img/about5.png);
+            background-size: contain;
+            background-position: center;
+            border-radius: 40%;
+
+
+        }
+
+        #aboutInner {
+            margin: auto;
+            margin-top: 45px;
+            background-color: rgb(255, 255, 255, 0.8);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+
+        #aboutInnerText {
+
+            margin-top: 30px;
+            margin-right: 50px;
+            position: absolute;
+            text-align: center;
+        }
+
+        /* Hover idea */
+
+        .aboutCont {
+            position: absolute;
+
+
+            width: 300px;
+            height: 300px;
+
+            top: 200px;
+            right: 200px;
+
+            /* background-color: rgb(000, 000, 000, 0.8); */
+
+            background-image: url(/img/about6.png);
+            background-size: contain;
+            background-position: center;
+            border-radius: 40%;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+
+
+
+
+        .aboutCont:hover .image {
+            opacity: 0.3;
+        }
+
+        .aboutCont:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            background-color: rgb(255, 255, 255, 0.8);
+            border-radius: 50%;
+            font-size: 16px;
+            padding: 50%;
+
+            width: 200px;
+            height: 200px;
+        }
+
+        .navi {
+            position: absolute;
+            margin-top: 50px;
+            color: turquoise;
+        }
+
+        /* testing */
+
+        /* Parent Container */
+        .content_img {
+            position: relative;
+
+            float: left;
+            margin-right: 10px;
+        }
+
+        /* Child Text Container */
+        .content_img div {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: black;
+            color: white;
+            margin-bottom: 5px;
+            font-family: sans-serif;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: visibility 0s, opacity 0.5s linear;
+            transition: visibility 0s, opacity 0.5s linear;
+            border-radius: 25px;
+        }
+
+        /* Hover on Parent Container */
+        .content_img:hover {
+            cursor: pointer;
+        }
+
+        .content_img:hover div {
+            width: 150px;
+            padding: 8px 15px;
+            visibility: visible;
+            opacity: 0.7;
+        }
+
+        .modal-body {
+            background-image: url(/img/modalBackground.png);
+            width: 888px;
+            height: 500px;
+        }
+
+        .navDex {
+            margin-top: 100px;
+        }
+    </style>
 
     <title>Aresite</title>
 </head>
@@ -23,45 +247,178 @@
         <img src="/img/render.png" alt="">
     </div>
 
-    <div id="bodyCont">
+    <div class="aboutCont">
+        <img src="/img/about6.png" alt="Avatar" class="image" style="width:100%">
+        <div class="middle">
+            <div class="text"><img src="/img/logo.png" alt=""
+                    style="max-width: 300px; margin-top: -100px; margin-left: -150px;">
 
-        <div id="textCont">
+                <div class="content_img">
 
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ipsum laudantium tenetur, similique,
-                incidunt assumenda dicta inventore aliquam repellat facilis impedit laboriosam expedita nemo. Ipsam
-                provident ex pariatur aperiam commodi!</p>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ipsum laudantium tenetur, similique,
-                incidunt assumenda dicta inventore aliquam repellat facilis impedit laboriosam expedita nemo. Ipsam
-                provident ex pariatur aperiam commodi!</p>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ipsum laudantium tenetur, similique,
-                incidunt assumenda dicta inventore aliquam repellat facilis impedit laboriosam expedita nemo. Ipsam
-                provident ex pariatur aperiam commodi!</p>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ipsum laudantium tenetur, similique,
-                incidunt assumenda dicta inventore aliquam repellat facilis impedit laboriosam expedita nemo. Ipsam
-                provident ex pariatur aperiam commodi!</p>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ipsum laudantium tenetur, similique,
-                incidunt assumenda dicta inventore aliquam repellat facilis impedit laboriosam expedita nemo. Ipsam
-                provident ex pariatur aperiam commodi!</p>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ipsum laudantium tenetur, similique,
-                incidunt assumenda dicta inventore aliquam repellat facilis impedit laboriosam expedita nemo. Ipsam
-                provident ex pariatur aperiam commodi!</p>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ipsum laudantium tenetur, similique,
-                incidunt assumenda dicta inventore aliquam repellat facilis impedit laboriosam expedita nemo. Ipsam
-                provident ex pariatur aperiam commodi!</p>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ipsum laudantium tenetur, similique,
-                incidunt assumenda dicta inventore aliquam repellat facilis impedit laboriosam expedita nemo. Ipsam
-                provident ex pariatur aperiam commodi!</p>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ipsum laudantium tenetur, similique,
-                incidunt assumenda dicta inventore aliquam repellat facilis impedit laboriosam expedita nemo. Ipsam
-                provident ex pariatur aperiam commodi!</p>
+
+                    <img src='/img/navButton.png' width='100px' height='100px' title="Navigation"
+                        style="margin-left: -50px;" data-toggle="modal" data-target="#exampleModalCenter">
+                    <div>navigation</div>
+
+
+
+                </div>
+
+
+
+                <div class="navi">
+
+
+
+
+                </div>
+
+
+            </div>
+
 
         </div>
+
 
     </div>
 
 
 
 
+    <!-- <div id="about">
+        <img src="/img/title.png" alt="" style="position: absolute; width: 90%; margin: auto;">
+        <div id="aboutInner">
+
+            <div id="aboutInnerText">
+                <h3>Ares and Ba'ul</h3>
+                <p>Rovers, Travelers.
+                    <br>
+                    Heavily inspired off a Pokemon/Fantasy RPG
+                </p>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="bodyCont">
+
+        <div id="textCont">
+
+
+
+        </div>
+
+    </div>
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <!-- <div class="navDex"> -->
+                    <img src="/img/navigation.png" alt="Navigation"
+                        style="width: 300px; margin-left: 100px; margin-bottom: 20px;">
+                    <div class="container" style="text-align: center;">
+                        <div class="row" style="margin-bottom: 50px;">
+                            <div class="col">
+                                <a href=""></a>
+                                <img src="/img/nav/Ares.png" data-src="/img/nav/ares.gif" data-hover="/img/nav/ares.gif"
+                                    alt="Ares" class="image-container" />
+                                <br>
+                                <h3>Ares</h3>
+                            </div>
+
+                            <div class="col">
+                                <img src="/img/nav/baul.png" data-src="/img/nav/baul.gif" data-hover="/img/nav/baul.gif"
+                                    alt="Ba'Ul" class="image-container" />
+                                <br>
+                                <h3>Ba'ul</h3>
+
+                            </div>
+                            <div class="col">
+                                <img src="/img/nav/team.png" alt="Team" data-src="/img/nav/team.gif"
+                                    data-hover="/img/nav/team.gif" class="image-container">
+                                <br>
+                                <h3>Team</h3>
+                            </div>
+                            <div class="col">
+                                <img src="/img/nav/backstory.png" alt="Backstory" data-src="/img/nav/backstory.gif"
+                                    data-hover="/img/nav/backstory.gif" class="image-container">
+                                <br>
+                                <h3>Backstory</h3>
+                            </div>
+                            <div class="col"><img src="/img/nav/drabbles.png" alt="Drabbles"
+                                    data-src="/img/nav/drabbles.gif" data-hover="/img/nav/drabbles.gif"
+                                    class="image-container">
+                                <br>
+                                <h3>Drabbles</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <img src="/img/nav/rules.png" alt="Rules" data-src="/img/nav/rules.gif"
+                                    data-hover="/img/nav/rules.gif" class="image-container">
+                                <br>
+                                <h3>Rules</h3>
+                            </div>
+                            <div class="col">
+                                <img src="/img/nav/relationships.png" alt="Relationships"
+                                    data-src="/img/nav/relathionships.gif" data-hover="/img/nav/relationships.gif"
+                                    class="image-container">
+                                <br>
+                                <h3>Relationships</h3>
+                            </div>
+                            <div class="col">
+                                <img src="/img/nav/asks.png" alt="Ask" data-src="/img/nav/asks.gif"
+                                    data-hover="/img/nav/asks.gif" class="image-container">
+                                <br>
+                                <h3>Asks</h3>
+                            </div>
+                            <div class="col">
+                                <img src="/img/nav/archive.png" alt="Archive" data-src="/img/nav/archive.gif"
+                                    data-hover="/img/nav/archive.gif" class="image-container">
+                                <br>
+                                <h3>Archive</h3>
+                            </div>
+                            <div class="col">
+                                <img src="/img/nav/back.png" alt="Back" data-src="/img/nav/back.gif"
+                                    data-hover="/img/nav/back.gif" class="image-container" data-dismiss="modal">
+                                <br>
+                                <h3>Back</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
 </body>
+
+<script>
+
+    $(".image-container").mouseover(function (e) {
+        $(this).attr("src", $(this).attr("src").replace(".png", ".gif"));
+    }).mouseout(function (e) {
+        $(this).attr("src", $(this).attr("src").replace(".gif", ".png"));
+    });
+</script>
 
 </html>

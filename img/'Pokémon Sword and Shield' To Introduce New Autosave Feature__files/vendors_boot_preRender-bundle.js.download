@@ -1,0 +1,2 @@
+(window.webpackJsonp_spotim_580132258=window.webpackJsonp_spotim_580132258||[]).push([[20],{313:function(e,t,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.getElementId=function(e){var t=e.getAttribute("data-module-element-id");t||(t=(0,n.guid)(),e.setAttribute("data-module-element-id",t));return t};var n=i(63)}}]);
+//# sourceMappingURL=vendors~boot~preRender-bundle.js.map
