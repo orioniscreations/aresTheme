@@ -1,0 +1,75 @@
+html {
+    margin: 0px;
+}
+
+body {
+    background-image: url(/img/-ggg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#bodyCont{
+    margin: auto;
+    text-align: center;
+
+    height: 700px;
+    width: 700px;
+
+    margin-top: 7%;
+    margin-bottom: 10%;
+
+    position: relative;
+
+
+    background-image: url(/img/circle1.png);
+    /* background-color:rgb(000, 000, 000, 0.8); */
+    background-size: cover;
+    /* border-radius: 50%; */
+}
+
+#textCont{
+
+    
+  
+    width: 365px;
+    height: 400px;
+    position:absolute;
+    top: 50%;
+    left:50%;
+    margin-top: -200px;
+    margin-left: -180px;
+
+    overflow-y: scroll;
+
+    
+}
+
+::-webkit-scrollbar-track
+{
+
+    background-color:transparent;
+}
+
+::-webkit-scrollbar
+{
+    width: 10px;
+    background-color:transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: #CFB53B;
+    border: 2px solid #C6930A;
+    border-radius: 6px;
+}
+
+
+#render {
+    position: absolute;
+    z-index: 1;
+    position: fixed;
+   
+    
+}
